@@ -1,0 +1,41 @@
+{
+  "name": "canvasshaderext",
+  "version": "1.0.0",
+  "description": "Functions for JS Canvas that provide functionalites similar to HLSL shaders",
+  "scripts": {
+    "dts": "tsc -p . && node ./dts-post-process.js index.d.ts"
+  },
+  "keywords": [
+    "canvas",
+    "node",
+    "js",
+    "hlsl"
+  ],
+  "homepage": "https://github.com/PapiOphidian/CanvasShaderExt#readme",
+  "bugs": {
+    "url": "https://github.com/PapiOphidian/CanvasShaderExt/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PapiOphidian/CanvasShaderExt.git"
+  },
+  "license": "MIT",
+  "author": "PapiOphidian",
+  "type": "commonjs",
+  "main": "./index.js",
+  "types": "./index.d.ts",
+  "files": [
+    "./index.d.ts",
+    "./index.js",
+    "./LICENSE",
+    "./package.json",
+    "./README.md"
+  ],
+  "dependencies": {
+    "canvas": "^3.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.1",
+    "typescript": "^5.8.3"
+  }
+}

@@ -1,0 +1,13 @@
+{
+	"files": [
+		"./index.js"
+	],
+	"compilerOptions": {
+		"skipLibCheck": true,
+		"allowJs": true,
+		"declaration": true,
+		"emitDeclarationOnly": true,
+		"types": ["node"],
+		"outDir": "./"
+	}
+}
