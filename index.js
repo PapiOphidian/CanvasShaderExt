@@ -327,7 +327,7 @@ function mask(base, imageMask, channel) {
 	const channelIndex = channelIndexes[channel];
 
 	for (let i = 0; i < baseData.data.length; i += 4) {
-		baseData.data[i + 3] = tint2Mult(maskData.data[i + channelIndex]);
+		baseData.data[i + 3] = maskData.data[i + channelIndex];
 	}
 
 	base.putImageData(baseData, 0, 0);
