@@ -502,6 +502,25 @@ function clamp(min, max, val) {
 	return val;
 }
 
+/**
+ * Quick way to draw a rect of a color. x, y, z, w is passed directly into CanvasRenderingContext2D.fillRect.
+ * @param {Canvas.CanvasRenderingContext2D} ctx The context containing the image data that will be filled.
+ * @param {number} r The R component of the color to fill with.
+ * @param {number} g The G component of the color to fill with.
+ * @param {number} b The B component of the color to fill with.
+ * @param {number} [x] The starting x coordinate of the rect.
+ * @param {number} [y] The starting y coordinate of the rect.
+ * @param {number} [z]
+ * @param {number} [h]
+ * @returns {void} The context is written to directly.
+ */
+function fill(ctx, r, g, b, x = 0, y = 0, z = ctx.canvas.width, h = ctx.canvas.height) {
+	const oldFillStyle = ctx.fillStyle;
+	ctx.fillStyle = `rgb(${r}, ${g}, ${b})`;
+	ctx.fillRect(x, y, z, h);
+	ctx.fillStyle = oldFillStyle;
+}
+
 
 // HDR
 
@@ -634,6 +653,7 @@ module.exports = {
 	image2Context,
 	lerp,
 	clamp,
+	fill,
 	linearToSRGB,
 	sRGBToLinear,
 	hdrToSdr

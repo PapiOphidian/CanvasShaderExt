@@ -251,6 +251,19 @@ export function lerp(a: number, b: number, t: number): number;
  */
 export function clamp(min: number, max: number, val: number): number;
 /**
+ * Quick way to draw a rect of a color. x, y, z, w is passed directly into CanvasRenderingContext2D.fillRect.
+ * @param ctx The context containing the image data that will be filled.
+ * @param r The R component of the color to fill with.
+ * @param g The G component of the color to fill with.
+ * @param b The B component of the color to fill with.
+ * @param x The starting x coordinate of the rect.
+ * @param y The starting y coordinate of the rect.
+ * @param z
+ * @param h
+ * @returns The context is written to directly.
+ */
+export function fill(ctx: Canvas.CanvasRenderingContext2D, r: number, g: number, b: number, x?: number, y?: number, z?: number, h?: number): void;
+/**
  * Converts an HDR R, G, or B component to standard RGB color space.
  * @param x Either the R, G, or B component.
  */
