@@ -229,6 +229,14 @@ export function unpack(ctx: Canvas.CanvasRenderingContext2D): [Canvas.CanvasRend
  */
 export function image2Context(img: Canvas.Image): Canvas.CanvasRenderingContext2D;
 /**
+ * Takes an RGB value in the range of 0-255 and converts it to 0-1 where 255 will output 1.
+ * @param tint int color value in the range of 0-255.
+ *
+ * @example
+ * const converted = tint2Mult(128);
+ */
+export function tint2Mult(tint: number): number;
+/**
  * Linearly interpolate (lerp for short) between two values over another value.
  * @param a Min value.
  * @param b Max value.

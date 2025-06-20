@@ -651,6 +651,7 @@ module.exports = {
 	pack,
 	unpack,
 	image2Context,
+	tint2Mult,
 	lerp,
 	clamp,
 	fill,
